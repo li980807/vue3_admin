@@ -6,9 +6,9 @@
 </template>
 
 <script setup lang="ts">
-
+var str = "猪猪"
 const fun = () => {
-  console.log("中国")
+  console.log('中国')
 }
 fun()
 </script>
