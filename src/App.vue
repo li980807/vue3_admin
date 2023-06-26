@@ -6,10 +6,9 @@
 </template>
 
 <script setup lang="ts">
-var str = '爱你'
-const fun = ()=>{
-       console.log(33);
-  
+
+const fun = () => {
+  console.log("中国")
 }
 fun()
 </script>
