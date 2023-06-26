@@ -6,7 +6,12 @@
 </template>
 
 <script setup lang="ts">
-const str = '爱你'
+var str = '爱你'
+const fun = ()=>{
+       console.log(33);
+  
+}
+fun()
 </script>
 
 <style scoped lang="scss">
