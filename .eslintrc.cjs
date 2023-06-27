@@ -1,5 +1,5 @@
 // @see https://eslint.bootcss.com/docs/rules/
-// 是一个检测工具，包含js语法以及少部分格式问题
+// 是一个检测工具，包含js语法以及少部分格式问题 
 module.exports = {
     env: {
       browser: true,

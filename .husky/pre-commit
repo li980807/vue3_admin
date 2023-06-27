@@ -2,5 +2,7 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # npm test
+# git 提交时 检测代码是否符合规范
 npm run lint:eslint
+# 格式化代码
 npm run format

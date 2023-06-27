@@ -1,5 +1,5 @@
 // @see https://stylelint.bootcss.com/
-
+// 可格式化css代码，检查css语法错误与不合理的写法，指定css书写顺序等
 module.exports = {
     extends: [
       'stylelint-config-standard', // 配置stylelint拓展插件
