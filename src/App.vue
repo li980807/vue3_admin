@@ -16,10 +16,8 @@
 </template>
 
 <script setup lang="ts">
-
-
 import { Star } from '@element-plus/icons-vue'
-let str = '猪猪'
+let str = '猪猪啊阿信阿信'
 const fun = () => {
   console.log('中国')
 }
@@ -30,6 +28,6 @@ fun()
 .box {
   width: 100px;
   height: 100px;
-  background-color: pink;
+  background-color: $color;
 }
 </style>

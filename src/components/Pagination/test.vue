@@ -1,6 +1,5 @@
 <template>
   <div class="">{{ data }}</div>
-
 </template>
 
 <script setup lang="ts">
