@@ -5,7 +5,7 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { viteMockServe } from 'vite-plugin-mock'
 // https://vitejs.dev/config/
 // command检测当前的开发环境
-export default defineConfig(({command}) => {
+export default defineConfig(({ command }) => {
   return {
     plugins: [
       vue(),
@@ -16,7 +16,7 @@ export default defineConfig(({command}) => {
         symbolId: 'icon-[dir]-[name]',
       }),
       viteMockServe({
-        enable: command === 'serve',
+        localEnabled: command === 'serve',
       }),
     ],
     resolve: {
@@ -24,7 +24,8 @@ export default defineConfig(({command}) => {
         '@': path.resolve('./src'), // 相对路径别名配置，使用 @ 代替 src
       },
     },
-    css: {//sacc全局变量配置项
+    css: {
+      //sacc全局变量配置项
       preprocessorOptions: {
         scss: {
           javascriptEnabled: true,
