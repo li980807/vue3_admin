@@ -10,6 +10,10 @@ import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 import gloalcomponent from '@/components'
 // 引入模板的全局样式
 import '@/styles/index.scss'
+// svg插件需要的配置代码
+import 'virtual:svg-icons-register'
+// 引入路由
+import router from './router'
 const app = createApp(App)
 // 安装自定义插件
 app.use(gloalcomponent)
@@ -17,17 +21,6 @@ app.use(gloalcomponent)
 app.use(ElementPlus, {
   locale: zhCn,
 })
-// svg插件需要的配置代码
-import 'virtual:svg-icons-register'
-// import axios from 'axios'
-// axios({
-//   url: '/api/user/login',
-//   method: 'post',
-//   data: {
-//     username: 'admin',
-//     password: '111111',
-//   },
-// })
-// console.log(import.meta.env.VITE_APP_BASE_API);
-
+// 注册模板路由
+app.use(router)
 app.mount('#app')

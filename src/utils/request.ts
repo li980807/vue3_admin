@@ -1,6 +1,7 @@
 // 对axios二次封装 使用请求与响应拦截器
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
+// 模块 ""element-plus"" 没有导出的成员 "ElMessage"。你是想改用 "import ElMessage from "element-plus"" 吗?
 declare module 'element-plus' {
   export class ElMessage {
     static success(message: string): void;
@@ -27,9 +28,9 @@ request.interceptors.request.use((config) => {
 })
 // 第三步 响应拦截器 两个回调 成功的回调和失败的回调
 request.interceptors.response.use((response) => {
-
     // 成功的回调
     return response.data
+    
 }, (error) => {
 
     // 失败的回调 处理http网络的错误
