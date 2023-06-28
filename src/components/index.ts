@@ -9,9 +9,11 @@ const gloalcomponent = { SvgIcon, Pagination }
 // console.log(gloalcomponent)
 // 对外暴露插件
 export default {
-  install(app) {
+  install(app: any) {
     // 注册项目的全部全局组件
     Object.keys(gloalcomponent).forEach((key) => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       app.component(key, gloalcomponent[key])
     })
   },

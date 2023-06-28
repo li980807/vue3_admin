@@ -19,5 +19,15 @@ app.use(ElementPlus, {
 })
 // svg插件需要的配置代码
 import 'virtual:svg-icons-register'
+// import axios from 'axios'
+// axios({
+//   url: '/api/user/login',
+//   method: 'post',
+//   data: {
+//     username: 'admin',
+//     password: '111111',
+//   },
+// })
+// console.log(import.meta.env.VITE_APP_BASE_API);
 
 app.mount('#app')

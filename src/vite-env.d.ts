@@ -7,3 +7,13 @@ declare module '*.vue' {
 
   export default vueComponent
 }
+// import { ElMessage } from 'element-plus';
+// // 手动声明 ElMessage 模块 ""element-plus"" 没有导出的成员 "ElMessage"。你是想改用 "import ElMessage from "element-plus"" 吗?
+// declare module 'element-plus' {
+//   export class ElMessage {
+//     static success(message: string): void;
+//     static warning(message: string): void;
+//     static info(message: string): void;
+//     static error(message: string): void;
+//   }
+// }
