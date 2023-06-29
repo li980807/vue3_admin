@@ -1,15 +1,7 @@
 // 对axios二次封装 使用请求与响应拦截器
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
-// 模块 ""element-plus"" 没有导出的成员 "ElMessage"。你是想改用 "import ElMessage from "element-plus"" 吗?
-declare module 'element-plus' {
-  export class ElMessage {
-    static success(message: string): void;
-    static warning(message: string): void;
-    static info(message: string): void;
-    static error(message: string): void;
-  }
-}
+
 // 第一步:利用axios对象的create方法 去创建axios实例(其他的配置:基础路径、超时的时间)
 // create创建的request也是axios 只不过可以写一些配置
 
