@@ -8,7 +8,8 @@ export interface loginForm {
 export interface loginResPonseData {
     code: number,
     data: {
-        token: string
+        token?: string,
+        message?: string
     }
 }
 // 定义服务器返回用户信息相关的数据类型

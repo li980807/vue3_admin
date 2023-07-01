@@ -1,8 +1,6 @@
-<!--  -->
+<!-- sku管理 -->
 <template>
-  <div>
-    HOME-首页-展示登录成功的数据
-  </div>
+  <div>sku管理</div>
 </template>
 
 <script setup lang='ts'>

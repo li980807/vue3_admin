@@ -4,8 +4,7 @@ import App from '@/App.vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 //配置国际化
-// @ts-expect-error 没有定义ts的类型文件所以报错 最直接的方法是让ts忽略这个文件的检测
-import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+import zhCn from 'element-plus'
 // createApp(App).mount('#app')
 import gloalcomponent from '@/components'
 // 引入模板的全局样式

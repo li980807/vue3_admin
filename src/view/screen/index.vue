@@ -1,8 +1,6 @@
-<!--  -->
+<!-- 数据大屏 -->
 <template>
-  <div>
-    HOME-首页-展示登录成功的数据
-  </div>
+  <div>数据大屏一级路由</div>
 </template>
 
 <script setup lang='ts'>
