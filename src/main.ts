@@ -15,6 +15,8 @@ import 'virtual:svg-icons-register'
 import router from './router'
 // 引入pinia仓库
 import pinia from './store/index'
+// 引入路由鉴权
+import './permission'
 const app = createApp(App)
 // 安装自定义插件
 app.use(gloalcomponent)
@@ -25,4 +27,5 @@ app.use(ElementPlus, {
 app.use(pinia)
 // 注册模板路由
 app.use(router)
+// 路由鉴权
 app.mount('#app')

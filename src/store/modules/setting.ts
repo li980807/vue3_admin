@@ -6,6 +6,7 @@ import { defineStore } from 'pinia'
     state: () => {
         return {
             fold: false,//控制菜单折叠还是收起
+            refsh: false,//用于控制刷新效果
         }
     },
 })

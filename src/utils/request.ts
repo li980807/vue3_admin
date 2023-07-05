@@ -1,7 +1,8 @@
 // 对axios二次封装 使用请求与响应拦截器
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
-
+// 引入用户相关仓库
+import useUserStore from '@/store/modules/user'
 // 第一步:利用axios对象的create方法 去创建axios实例(其他的配置:基础路径、超时的时间)
 // create创建的request也是axios 只不过可以写一些配置
 
@@ -15,6 +16,11 @@ const request = axios.create({
 request.interceptors.request.use((config) => {
     // config.headers.token = '8899'
     // config配置对象有headers请求头 给服务器端携带公共的参数
+    // 获取用户相关的下仓库:获取仓库内部的token登录成功后发送请求会携带给服务器
+    const userStore = useUserStore()
+    if (userStore.token) {
+        config.headers.token = userStore.token
+    }
     return config
 
 })
@@ -22,7 +28,7 @@ request.interceptors.request.use((config) => {
 request.interceptors.response.use((response) => {
     // 成功的回调
     return response.data
-    
+
 }, (error) => {
 
     // 失败的回调 处理http网络的错误

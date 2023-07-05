@@ -2,7 +2,7 @@
 <template>
     <div class="layout_container">
         <!-- 左侧菜单 -->
-        <div class="layout_silder" :class="{ fold: LayOutSettingStore.fold ? true : false }">
+        <div class="layout_silder">
             <Logo></Logo>
             <el-scrollbar class="scrollbar">
                 <!-- :collapse-transition="false"关闭自带动画 -->
@@ -31,7 +31,7 @@ import Logo from './logo/index.vue'
 // 菜单组件
 import Menu from './menu/index.vue'
 // 获取用户相关的小仓库
-import { useUserStore } from '@/store/modules/user'
+import useUserStore from '@/store/modules/user'
 // 引入顶部tabbar组件
 import Tabbar from './tabbar/index.vue'
 // 右侧内容展示区
@@ -70,10 +70,6 @@ export default {
             .el-menu {
                 border-right: none;
             }
-        }
-
-        &.fold {
-            width: $base-menu-min-width;
         }
     }
 

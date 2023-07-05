@@ -16,7 +16,7 @@ export const constantRoute = [
         name: 'home',//命名路由
         redirect: '/home',
         meta: {
-            title: 'layout', show: true, icon: 'HomeFilled'
+            title: '', show: true, icon: ''
         },
         children: [
             {
@@ -39,6 +39,7 @@ export const constantRoute = [
         meta: {
             title: '权限管理', show: true, icon: 'Lock'
         },
+        redirect: '/acl/user',
         children: [
             {
                 path: '/acl/user',
@@ -67,6 +68,7 @@ export const constantRoute = [
         meta: {
             title: '商品管理', show: true, icon: 'Sugar'
         },
+        redirect: '/product/trademark',
         children: [
             {
                 path: '/product/trademark',
