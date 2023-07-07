@@ -1,31 +1,28 @@
-// 登录接口需要携带参数的ts类型 interface可以用来定义对象的属性、方法以及类型
-export interface loginForm {
+// 定义用户相关的数据的ts类型
+// 用户登录接口携带参数的ts类型
+
+export interface loginFormData {
     username: string,
     password: string
 }
-
-// 登录接口返回的数据类型
-export interface loginResPonseData {
-    code: number,
-    data: {
-        token?: string,
-        message?: string
-    }
+// 定义全部接口返回数据都拥有的ts类型
+export interface ResponseData {
+    "code": number,
+    "message": string,
+    "ok": string
 }
-// 定义服务器返回用户信息相关的数据类型
-export interface userResPonseData {
-    code: number,
+// 定义登录接口返回数据的类型
+export interface loginResponsData extends ResponseData {
+    data: string
+}
+// 获取用户信息返回的数据类型
+
+export interface userInfoResponsData extends ResponseData {
     data: {
-        checkUser: {
-            userId: number,
-            avatar: string,
-            username: string,
-            password: string,
-            desc: string,
-            roles: string[],
-            buttons: string[],
-            routes: string[],
-            token: string
-        }
+        "routes": string[],
+        "buttons": string[],
+        "roles": string[],
+        "name": string,
+        "avatar": string
     }
 }

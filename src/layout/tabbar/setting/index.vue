@@ -51,9 +51,9 @@ const userStore = useUserStore()
 const $router = useRouter()
 const $route = useRoute()
 // 点击退出登录
-const logout = () => {
-    // 清除数据跳转到登录页面
-    userStore.userLogout()
+const logout = async () => {
+    // 添加了await异步语句 会跳转到登录页面
+    await userStore.userLogout()
     $router.push({ path: '/login', query: { redirect: $route.path } })
 }
 </script>

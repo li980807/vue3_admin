@@ -4,7 +4,8 @@ import App from '@/App.vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 //配置国际化
-import zhCn from 'element-plus'
+import zhCn from 'element-plus/lib/locale/lang/zh-cn'
+// import zhCn from 'element-plus'
 // createApp(App).mount('#app')
 import gloalcomponent from '@/components'
 // 引入模板的全局样式

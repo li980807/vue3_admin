@@ -33,7 +33,7 @@ import { ElNotification } from 'element-plus';
 import { getTime } from '@/utils/time'
 const userStore = useUserStore()
 // 收集表单数据
-let loginForm = reactive({ username: 'admin', password: '123456' })
+let loginForm = reactive({ username: 'admin', password: 'atguigu123' })
 let loading = ref(false)
 // 获取路由器
 const $router = useRouter()
